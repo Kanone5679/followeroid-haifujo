@@ -41,10 +41,11 @@ h1{
 
 /* ーーーーー 本文エリア ーーーーー */
 .content{
-    width: 150px;
+    width: 200px;
     margin:0 auto;
     font-size:24px;
     line-height:1.8;
+    font-family: "BodyFont", sans-serif;
 }
 
 /* ーーーーー 各ブロック ーーーーー */
@@ -68,7 +69,7 @@ h1{
 }
 
 .link-block a::before{
-    content:"- ";
+    content:" - ";
     color:#FFFFFF;
 }
 
@@ -81,9 +82,9 @@ h1{
 .footer{
     width: 100%;
     margin-top: auto;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align:center;
-    background-color:#000000;
+    background-color:#202020;
 }
 
 .footer p{
