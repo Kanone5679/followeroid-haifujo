@@ -1,0 +1,84 @@
+/* ーーーーー フォント ーーーーー */
+/* タイトル用フォント */
+@font-face{
+    font-family: "TitleFont";
+    src: url("../font/MOBO-Bold.otf") format("opentype");
+}
+
+/* 本文用フォント */
+@font-face{
+    font-family: "BodyFont";
+    src: url("../font/MOBO-Regular.otf") format("opentype");
+}
+
+/* ーーーーー 全体 ーーーーー */
+body{
+    margin:0;
+    background:#AAAAAA;
+    color:#000000;
+    font-family:"BodyFont", sans-serif;
+}
+
+/* ーーーーー タイトル ーーーーー */
+h1{
+    color:#FFFFFF;
+    font-family:"TitleFont", sans-serif;
+    font-size:48px;
+    font-weight:normal;
+    text-align:center;
+
+    margin:40px 0 56px;
+}
+
+/* ーーーーー 本文エリア ーーーーー */
+.content{
+    width:700px;
+    margin:0 auto;
+
+    text-align:left;
+    font-size:24px;
+    line-height:1.8;
+}
+
+/* ーーーーー 各ブロック ーーーーー */
+.link-block{
+    margin-bottom: 1em;
+}
+
+.link-block h2{
+    font-size:24px;
+    font-weight:normal;
+    margin:0 0 6px;
+}
+
+/* ーーーーー リンク ーーーーー */
+.link-block a{
+    display:block;
+
+    color:#55131E;
+    text-decoration:none;
+    font-size:24px;
+}
+
+.link-block a::before{
+    content:"- ";
+    color:#FFFFFF;
+}
+
+/* ホバー時下線表示 */
+.link-block a:hover{
+    text-decoration:underline;
+}
+
+/* ーーーーー フッター ーーーーー */
+.footer{
+    width: 100%;
+    margin:80px 0 24px;
+    text-align:center;
+    background-color:#000000;
+}
+
+.footer p{
+    font-size:14px;
+    color:#FFFFFF;
+}
