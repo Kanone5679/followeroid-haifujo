@@ -22,7 +22,6 @@ body{
     margin:0;
     background:#AAAAAA;
     color:#000000;
-    font-family:"BodyFont", sans-serif;
 }
 
 /* ーーーーー タイトル ーーーーー */
@@ -38,8 +37,9 @@ h1{
 
 /* ーーーーー 本文エリア ーーーーー */
 .content{
+    width: 300px;
     margin:0 auto;
-    text-align:center;
+    font-family:"BodyFont", sans-serif;
     font-size:24px;
     line-height:1.8;
 }
@@ -59,7 +59,6 @@ h1{
 /* ーーーーー リンク ーーーーー */
 .link-block a{
     display:block;
-
     color:#55131E;
     text-decoration:none;
     font-size:18px;
@@ -79,11 +78,13 @@ h1{
 .footer{
     width: 100%;
     margin:24px 0 0;
+    padding: 10px 0;
     text-align:center;
     background-color:#000000;
 }
 
 .footer p{
+    margin:0;
     font-family:"footerFont", sans-serif;
     font-size:14px;
     line-height:1.2;
