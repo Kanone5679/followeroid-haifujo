@@ -8,7 +8,13 @@
 /* 本文用フォント */
 @font-face{
     font-family: "BodyFont";
-    src: url("../font/MOBO-Regular.otf") format("opentype");
+    src: url("../MOBO-SemiBold.otf") format("opentype");
+}
+
+/* フッター用フォント */
+@font-face{
+    font-family: "footerFont";
+    src: url("../font/MOBO-ExtraLight.otf") format("opentype");
 }
 
 /* ーーーーー 全体 ーーーーー */
@@ -32,23 +38,22 @@ h1{
 
 /* ーーーーー 本文エリア ーーーーー */
 .content{
-    width:700px;
     margin:0 auto;
-
-    text-align:left;
+    text-align:center;
     font-size:24px;
     line-height:1.8;
 }
 
 /* ーーーーー 各ブロック ーーーーー */
 .link-block{
+    text-align: left;
     margin-bottom: 1em;
 }
 
 .link-block h2{
     font-size:24px;
     font-weight:normal;
-    margin:0 0 6px;
+    margin:0 0 4px;
 }
 
 /* ーーーーー リンク ーーーーー */
@@ -57,7 +62,7 @@ h1{
 
     color:#55131E;
     text-decoration:none;
-    font-size:24px;
+    font-size:18px;
 }
 
 .link-block a::before{
@@ -73,12 +78,14 @@ h1{
 /* ーーーーー フッター ーーーーー */
 .footer{
     width: 100%;
-    margin:80px 0 24px;
+    margin:24px 0 0;
     text-align:center;
     background-color:#000000;
 }
 
 .footer p{
+    font-family:"footerFont", sans-serif;
     font-size:14px;
+    line-height:1.2;
     color:#FFFFFF;
 }
