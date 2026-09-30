@@ -21,7 +21,7 @@ body{
 
 .member-page{
     width:1100px;
-    margin:0 auto;
+    margin:50 auto;
 
     display:flex;
     align-items:flex-start;
@@ -44,7 +44,7 @@ body{
 
 .character img{
     max-width:100%;
-    max-height:900px;
+    max-height:1500px;
 
     width:auto;
     height:auto;
@@ -60,7 +60,7 @@ body{
 .member-info{
     width:550px;
 
-    font-size:20px;
+    font-size:14px;
     line-height:1.8;
 }
 
@@ -75,7 +75,7 @@ body{
 /* 見出し */
 
 .member-info h2{
-    font-size:24px;
+    font-size:18px;
     font-weight:normal;
 
     margin:0 0 8px;
@@ -91,8 +91,8 @@ body{
 /* 区切り線 */
 hr{
     border:none;
-    border-top:1px solid #2F2339;
-    margin:30px 0;
+    border-top:2px solid #2F2339;
+    margin:25px 0;
 }
 
 /* ========================================
