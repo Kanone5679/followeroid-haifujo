@@ -57,7 +57,7 @@ body{
 }
 
 .character img{
-    max-width:150%;
+    max-width:100%;
     max-height:1600px;
 
     width:auto;
@@ -123,6 +123,12 @@ hr{
 /* ========================================
    ZIPダウンロード
 ======================================== */
+.download {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
 
 .download a{
     display:inline-block;
