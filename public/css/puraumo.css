@@ -1,0 +1,164 @@
+/* ーーーーー フォント ーーーーー */
+@font-face{
+    font-family: "BodyFont";
+    src: url("../font/Kaisotai-Next-UP-B.ttf") format("truetype");
+}
+
+/* ーーーーー 全体 ーーーーー */
+body{
+    margin:0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background:#FFFFFF;
+    color:#000000;
+    font-family: "BodyFont", sans-serif;
+}
+
+/* ========================================
+   個別ページ
+======================================== */
+
+.member-page{
+    width:1400px;
+    margin:50px auto;
+
+    display:flex;
+    align-items:flex-start;
+    gap:60px;
+}
+
+/* ーーーーー メインページへ ーーーーー */
+.home-link{
+    position:fixed;
+    top:20px;
+    left:20px;
+
+    color:#000000;
+    font-size:20px;
+    text-decoration:none;
+}
+
+.home-link:hover{
+    text-decoration:underline;
+}
+
+/* ========================================
+   左：立ち絵
+======================================== */
+
+.character{
+    width:550px;
+    flex-shrink:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+.character img{
+    max-width:150%;
+    max-height:1600px;
+
+    width:auto;
+    height:auto;
+
+    object-fit:contain;
+}
+
+
+/* ========================================
+   右：情報
+======================================== */
+
+.member-info{
+    width:650px;
+
+    font-size:16px;
+    line-height:1.8;
+}
+
+
+/* 各セクション */
+
+.member-info section{
+    margin-bottom:30px;
+}
+
+
+/* 見出し */
+
+.member-info h2{
+    font-size:18px;
+    font-weight:normal;
+
+    margin:0 0 8px;
+}
+
+
+/* プロフィール・更新履歴 */
+
+.member-info p{
+    margin:0;
+}
+
+/* 区切り線 */
+hr{
+    border:none;
+    height: 2px;
+    background: #000000;
+    border-radius: 999px;
+    margin:25px 0;
+}
+
+/* ========================================
+   音声
+======================================== */
+
+/* .audio audio{
+    width:100%;
+} */
+
+
+/* ========================================
+   ZIPダウンロード
+======================================== */
+
+.download a{
+    display:inline-block;
+
+    padding:10px 30px;
+
+    border-radius:999px;
+
+    background:#000000;
+    color:#FFFFFF;
+
+    font-size:18px;
+    text-decoration:none;
+}
+
+.download a:hover{
+    background:#FFFFFF;
+    color:#000000;
+}
+
+
+/* ========================================
+   フッター
+======================================== */
+.footer{
+    width: 100%;
+    margin-top: auto;
+    padding: 15px 0;
+    text-align:center;
+    background-color:#202020;
+}
+
+.footer p{
+    margin:0;
+    font-family:"footerFont", sans-serif;
+    font-size:14px;
+    line-height:1.2;
+    color:#FFFFFF;
+}
