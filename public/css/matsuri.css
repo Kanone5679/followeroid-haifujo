@@ -1,7 +1,7 @@
 /* ーーーーー フォント ーーーーー */
 @font-face{
     font-family: "BodyFont";
-    src: url("../font/Mutsuki.ttf") format("truetype");
+    src: url("../font/TsukuhouShogoMinchoOFL/TsukuhouShogoMin-OFL.ttf") format("truetype");
 }
 
 /* ーーーーー 全体 ーーーーー */
@@ -20,7 +20,7 @@ body{
 ======================================== */
 
 .member-page{
-    width:1200px;
+    width:1400px;
     margin:50px auto;
 
     display:flex;
@@ -35,7 +35,7 @@ body{
     left:20px;
 
     color:#2F2339;
-    font-size:16px;
+    font-size:20px;
     text-decoration:none;
 }
 
@@ -58,7 +58,7 @@ body{
 
 .character img{
     max-width:100%;
-    max-height:1500px;
+    max-height:1600px;
 
     width:auto;
     height:auto;
@@ -74,7 +74,7 @@ body{
 .member-info{
     width:550px;
 
-    font-size:14px;
+    font-size:18px;
     line-height:1.8;
 }
 
@@ -89,7 +89,7 @@ body{
 /* 見出し */
 
 .member-info h2{
-    font-size:18px;
+    font-size:22px;
     font-weight:normal;
 
     margin:0 0 8px;
