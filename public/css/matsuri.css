@@ -21,13 +21,27 @@ body{
 
 .member-page{
     width:1100px;
-    margin:50 auto;
+    margin:50px auto;
 
     display:flex;
     align-items:flex-start;
     gap:60px;
 }
 
+/* ーーーーー メインページへ ーーーーー */
+.home-link{
+    position:fixed;
+    top:20px;
+    left:20px;
+
+    color:#2F2339;
+    font-size:16px;
+    text-decoration:none;
+}
+
+.home-link:hover{
+    text-decoration:underline;
+}
 
 /* ========================================
    左：立ち絵
@@ -91,7 +105,7 @@ body{
 /* 区切り線 */
 hr{
     border:none;
-    border-top:2px solid #2F2339;
+    border-top:1px solid #2F2339;
     margin:25px 0;
 }
 
