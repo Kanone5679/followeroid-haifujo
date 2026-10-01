@@ -74,7 +74,7 @@ body{
 .member-info{
     width:650px;
 
-    font-size:16px;
+    font-size:18px;
     line-height:1.8;
 }
 
@@ -89,7 +89,7 @@ body{
 /* 見出し */
 
 .member-info h2{
-    font-size:18px;
+    font-size:22px;
     font-weight:normal;
 
     margin:0 0 8px;
@@ -115,9 +115,9 @@ hr{
    音声
 ======================================== */
 
-.audio audio{
+/* .audio audio{
     width:100%;
-}
+} */
 
 
 /* ========================================
