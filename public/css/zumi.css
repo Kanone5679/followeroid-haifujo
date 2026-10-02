@@ -25,7 +25,7 @@ body{
 
     display:flex;
     align-items:flex-start;
-    gap:60px;
+    gap:80px;
 }
 
 /* ーーーーー メインページへ ーーーーー */
@@ -57,7 +57,7 @@ body{
 }
 
 .character img{
-    max-width:100%;
+    max-width:150%;
     max-height:1600px;
 
     width:auto;
