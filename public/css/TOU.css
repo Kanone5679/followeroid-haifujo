@@ -39,61 +39,24 @@ h1{
     margin:40px 0 56px;
 }
 
-/* ーーーーー 説明文 ーーーーー */
-h3{
-    color:#FFFFFF;
-    font-family:"BodyFont", sans-serif;
-    font-size:18px;
+/* ーーーーー 見出し ーーーーー */
+h2{
+    color:#000000;
+    font-family:"TitleFont", sans-serif;
+    font-size:24px;
     font-weight:normal;
-    text-align:center;
+    text-align: left;
 }
-
-.TOU-url {
-    display:block;
-    color:#55131E;
-    text-decoration:none;
-    font-size:18px;
-    text-align:center;
-}
-
 
 /* ーーーーー 本文エリア ーーーーー */
 .content{
-    width: 280px;
-    margin:0 auto;
-    font-size:24px;
-    line-height:1.8;
+    color:#000000;
     font-family: "BodyFont", sans-serif;
-}
-
-/* ーーーーー 各ブロック ーーーーー */
-.link-block{
-    text-align: left;
-    margin-bottom: 1em;
-}
-
-.link-block h2{
-    font-size:24px;
-    font-weight:normal;
-    margin:0 0 4px;
-}
-
-/* ーーーーー リンク ーーーーー */
-.link-block a{
-    display:block;
-    color:#55131E;
-    text-decoration:none;
+    width: 300px;
+    margin:0 auto;
     font-size:18px;
-}
-
-.link-block a::before{
-    content:" - ";
-    color:#FFFFFF;
-}
-
-/* ホバー時下線表示 */
-.link-block a:hover{
-    text-decoration:underline;
+    line-height:1.8;
+    text-align: left;
 }
 
 /* ーーーーー フッター ーーーーー */
