@@ -46,6 +46,7 @@ h1{
     font-size:18px;
     font-weight:normal;
     text-align:center;
+    margin:0 0 5px;
 }
 
 .tou-section .TOU-url {
@@ -107,7 +108,8 @@ main {
 /* ーーーーー フッター ーーーーー */
 .footer{
     width: 100%;
-    margin-top: auto;
+    /* margin-top: auto; */
+    margin-top: 0;
     padding: 15px 0;
     text-align:center;
     background-color:#202020;
