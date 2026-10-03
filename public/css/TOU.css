@@ -36,7 +36,7 @@ h1{
     font-weight:normal;
     text-align:center;
 
-    margin:40px 0 56px;
+    margin:40px 0 20px;
 }
 
 /* ーーーーー 見出し ーーーーー */
@@ -48,15 +48,35 @@ h2{
     text-align: left;
 }
 
+/* ーーーーー メインページへ ーーーーー */
+.home-link{
+    position:fixed;
+    top:20px;
+    left:20px;
+
+    color:#55131E;
+    font-size:20px;
+    text-decoration:none;
+}
+
 /* ーーーーー 本文エリア ーーーーー */
 .content{
     color:#000000;
     font-family: "BodyFont", sans-serif;
-    width: 300px;
+    width: 1000px;
     margin:0 auto;
     font-size:18px;
     line-height:1.8;
     text-align: left;
+}
+
+/* 区切り線 */
+hr{
+    border:none;
+    height: 2px;
+    background: #2F2339;
+    border-radius: 999px;
+    margin:25px 0;
 }
 
 /* ーーーーー フッター ーーーーー */
