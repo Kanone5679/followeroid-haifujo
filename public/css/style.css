@@ -40,7 +40,7 @@ h1{
 }
 
 /* ーーーーー 説明文 ーーーーー */
-h3{
+h3.tou-section h3{
     color:#FFFFFF;
     font-family:"BodyFont", sans-serif;
     font-size:18px;
@@ -48,7 +48,7 @@ h3{
     text-align:center;
 }
 
-a.TOU-url {
+.tou-section .TOU-url {
     display:block;
     color:#55131E;
     text-decoration:none;
@@ -56,6 +56,9 @@ a.TOU-url {
     text-align:center;
 }
 
+.tou-section .TOU-url:hover {
+    text-decoration: underline;
+}
 
 /* ーーーーー 本文エリア ーーーーー */
 .content{
