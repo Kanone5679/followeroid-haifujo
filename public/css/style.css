@@ -2,19 +2,19 @@
 /* タイトル用フォント */
 @font-face{
     font-family: "TitleFont";
-    src: url("../font/MOBO-Bold.otf") format("opentype");
+    src: url("../font/MOBO/MOBO-Bold.otf") format("opentype");
 }
 
 /* 本文用フォント */
 @font-face{
     font-family: "BodyFont";
-    src: url("../font/MOBO-SemiBold.otf") format("opentype");
+    src: url("../font/MOBO/MOBO-SemiBold.otf") format("opentype");
 }
 
 /* フッター用フォント */
 @font-face{
     font-family: "footerFont";
-    src: url("../font/MOBO-ExtraLight.otf") format("opentype");
+    src: url("../font/MOBO/MOBO-ExtraLight.otf") format("opentype");
 }
 
 /* ーーーーー 全体 ーーーーー */
@@ -96,8 +96,8 @@ main {
 }
 
 .link-block a::before{
-    content:" - ";
-    color:#FFFFFF;
+    content:"　 - ";
+    color:#000000;
 }
 
 /* ホバー時下線表示 */
