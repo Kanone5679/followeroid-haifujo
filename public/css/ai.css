@@ -1,7 +1,7 @@
 /* ーーーーー フォント ーーーーー */
 @font-face{
     font-family: "BodyFont";
-    src: url("../font/Kaisotai-Next-UP-B.ttf") format("truetype");
+    src: url("../font/花鳥風月ＰＢＢ.ttf") format("truetype");
 }
 
 /* ーーーーー 全体 ーーーーー */
@@ -10,8 +10,8 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background:#FFFFFF;
-    color:#000000;
+    background:#CEDDE5;
+    color:#0B344C;
     font-family: "BodyFont", sans-serif;
 }
 
@@ -34,7 +34,7 @@ body{
     top:20px;
     left:20px;
 
-    color:#000000;
+    color:#0B344C;
     font-size:20px;
     text-decoration:none;
 }
@@ -106,7 +106,7 @@ body{
 hr{
     border:none;
     height: 2px;
-    background: #000000;
+    background: #0B344C;
     border-radius: 999px;
     margin:25px 0;
 }
@@ -130,16 +130,16 @@ hr{
 
     border-radius:999px;
 
-    background:#000000;
-    color:#FFFFFF;
+    background:#0B344C;
+    color:#A6C1D1;
 
     font-size:18px;
     text-decoration:none;
 }
 
 .download a:hover{
-    background:#FFFFFF;
-    color:#000000;
+    background:#A6C1D1;
+    color:#0B344C;
 }
 
 
