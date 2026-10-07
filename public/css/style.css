@@ -72,12 +72,13 @@ h1{
 }
 
 main {
-    margin-bottom: 56px;
+    margin-bottom: 100px;
 }
 
 /* ーーーーー 各ブロック ーーーーー */
 .link-block{
-    text-align: left;
+    /* text-align: left; */
+    text-align:center;
     margin-bottom: 1em;
 }
 
@@ -96,8 +97,11 @@ main {
 }
 
 .link-block a::before{
-    content:"　 - ";
+    content:" - ";
+    display: inline-block;
+    text-decoration:none;
     color:#000000;
+    font-size:18px;
 }
 
 /* ホバー時下線表示 */
