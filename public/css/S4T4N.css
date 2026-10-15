@@ -124,6 +124,13 @@ hr{
    ZIPダウンロード
 ======================================== */
 
+.download {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
 .download a{
     display:inline-block;
 
