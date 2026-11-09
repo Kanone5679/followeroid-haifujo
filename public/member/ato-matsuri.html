@@ -16,29 +16,31 @@
 
         <!-- 左：立ち絵 -->
         <div class="character">
-            <button class="character-arrow"
-                    id="prev-character"
-                    type="button"
-                    aria-label="前の立ち絵">
-                ◀
-            </button>
 
-            <div class="character-display">
-                <img id="character-image"
-                    src="../img/matsuritachie.png"
-                    alt="阿藤まつり立ち絵">
+            <div class="character-image-area">
+                <button class="character-arrow"
+                        id="prev-character"
+                        type="button"
+                        aria-label="前の立ち絵">
+                    ◀
+                </button>
 
-                <p id="character-description">
-                    阿藤まつり
-                </p>
+                <div class="character-display">
+                    <img id="character-image"
+                        src="../img/matsuritachie.png"
+                        alt="阿藤まつり立ち絵">
+                </div>
+
+                <button class="character-arrow"
+                        id="next-character"
+                        type="button"
+                        aria-label="次の立ち絵">
+                    ▶
+                </button>
             </div>
 
-            <button class="character-arrow"
-                    id="next-character"
-                    type="button"
-                    aria-label="次の立ち絵">
-                ▶
-            </button>
+            <p id="character-description">阿藤まつり</p>
+
         </div>
 
 
@@ -136,7 +138,7 @@
         },
 
         {
-            src: "../img/matsurisasayakitachie.png",
+            src: "../img/matsuri_sasayakitachie.png",
             alt: "阿藤まつり（囁）立ち絵",
             description: "阿藤まつり（囁）"
         }
@@ -152,8 +154,6 @@
         const description = document.getElementById("character-description");
 
         const data = characterImages[currentIndex];
-
-        console.log("現在の画像:", data.src);
 
         image.src = data.src;
         image.alt = data.alt;

@@ -67,63 +67,43 @@ body{
 } */
 
 .character{
-    width:550px;
-    flex-shrink:0;
-}
-
-.character-view{
-    position:relative;
-    width:100%;
-    display:block;
-}
-
-/* 立ち絵表示部分 */
-
-.character-display{
     width:100%;
     display:flex;
     flex-direction:column;
     align-items:center;
 }
 
-.character-display img{
+/* 画像と矢印 */
+
+.character-image-area{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+}
+
+.character-image-area img{
     max-width:150%;
     max-height:1600px;
-
     width:auto;
     height:auto;
-
     object-fit:contain;
 }
 
-/* 説明文 */
-
-#character-description{
-    width:100%;
-    margin:10px 0 0;
-
-    font-size:14px;
-    line-height:1.5;
-    text-align:center;
-}
-
-/* 左右の矢印 */
+/* 矢印 */
 
 .character-arrow{
     position:absolute;
     top:50%;
     transform:translateY(-50%);
-
     z-index:10;
 
     border:none;
     background:transparent;
-
     font-size:22px;
     color:#2F2339;
-
     cursor:pointer;
-    padding:5px;
 }
 
 #prev-character{
@@ -132,10 +112,6 @@ body{
 
 #next-character{
     right:0;
-}
-
-.character-arrow:hover{
-    opacity:0.5;
 }
 
 /* ========================================
