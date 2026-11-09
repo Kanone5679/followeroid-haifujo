@@ -155,10 +155,23 @@
 
         const data = characterImages[currentIndex];
 
-        image.src = data.src;
-        image.alt = data.alt;
+        // フェードアウト
+        image.classList.add("character-fade");
+        description.classList.add("character-fade");
 
-        description.textContent = data.description;
+        // フェードアウト後に画像を変更
+        setTimeout(function(){
+
+            image.src = data.src;
+            image.alt = data.alt;
+
+            description.textContent = data.description;
+
+            // フェードイン
+            image.classList.remove("character-fade");
+            description.classList.remove("character-fade");
+
+        }, 300);
 
     }
 
