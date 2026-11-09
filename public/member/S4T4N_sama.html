@@ -15,7 +15,29 @@
 
         <!-- 左：立ち絵 -->
         <div class="character">
-            <img src="../img/S4T4Nportrait.png" alt="S4T4N_sama立ち絵">
+            <div class="character-image-area">
+                <button class="character-arrow"
+                        id="prev-character"
+                        type="button"
+                        aria-label="前の立ち絵">
+                    ◀
+                </button>
+
+                <div class="character-display">
+                    <img id="character-image"
+                        src="../img/S4T4Nportrait.png"
+                        alt="S4T4N_sama立ち絵">
+                </div>
+
+                <button class="character-arrow"
+                        id="next-character"
+                        type="button"
+                        aria-label="次の立ち絵">
+                    ▶
+                </button>
+            </div>
+
+            <p id="character-description">S4T4N_sama</p>
         </div>
 
 
@@ -108,6 +130,97 @@
         <p>各種コンテンツは利用規約をご確認の上ご利用ください</p>
         <p>@2026 amesuke</p>
     </footer>
+
+    <script>
+
+    // 立ち絵の登録
+    const characterImages = [
+
+        {
+            src: "../img/S4T4Nportrait.png",
+            alt: "S4T4N_sama立ち絵",
+            description: "S4T4N_sama"
+        },
+
+        {
+            src: "../img/S4T4ND5tachie.png",
+            alt: "S4T4N_sama(D5)立ち絵",
+            description: "S4T4N_sama(D5)"
+        },
+
+        {
+            src: "../img/S4T4NZetttachie.png",
+            alt: "S4T4N_sama(Zett)立ち絵",
+            description: "S4T4N_sama(Zett)"
+        }
+
+    ];
+
+    // 立ち絵をあらかじめ読み込んでおく
+    characterImages.forEach(function(data){
+        const preload = new Image();
+        preload.src = data.src;
+    });
+
+    let currentIndex = 0;
+
+    // 表示を更新する処理
+    function updateCharacter(){
+        const image = document.getElementById("character-image");
+        const description = document.getElementById("character-description");
+        const data = characterImages[currentIndex];
+
+        // フェードアウト
+        image.classList.add("character-fade");
+        description.classList.add("character-fade");
+
+        setTimeout(function(){
+
+            // 画像を切り替える
+            image.src = data.src;
+            image.alt = data.alt;
+            description.textContent = data.description;
+
+            // フェードイン
+            image.classList.remove("character-fade");
+            description.classList.remove("character-fade");
+
+        }, 300);
+    }
+
+    // 前へ
+    document.getElementById("prev-character").addEventListener("click", function(){
+
+        currentIndex--;
+
+        if(currentIndex < 0){
+            currentIndex = characterImages.length - 1;
+        }
+
+        updateCharacter();
+
+    });
+
+    // 次へ
+    document.getElementById("next-character").addEventListener("click", function(){
+
+        currentIndex++;
+
+        if(currentIndex >= characterImages.length){
+            currentIndex = 0;
+        }
+
+        updateCharacter();
+
+    });
+
+    // 画像が1枚だけなら矢印を非表示
+    if(characterImages.length <= 1){
+        document.getElementById("prev-character").style.display = "none";
+        document.getElementById("next-character").style.display = "none";
+    }
+
+    </script>
 
 </body>
 </html>

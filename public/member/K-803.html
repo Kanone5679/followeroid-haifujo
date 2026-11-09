@@ -15,7 +15,29 @@
 
         <!-- 左：立ち絵 -->
         <div class="character">
-            <img src="../img/K-803tachie.png" alt="K-803立ち絵">
+            <div class="character-image-area">
+                <button class="character-arrow"
+                        id="prev-character"
+                        type="button"
+                        aria-label="前の立ち絵">
+                    ◀
+                </button>
+
+                <div class="character-display">
+                    <img id="character-image"
+                        src="../img/K-803tachie.png"
+                        alt="K-803立ち絵">
+                </div>
+
+                <button class="character-arrow"
+                        id="next-character"
+                        type="button"
+                        aria-label="次の立ち絵">
+                    ▶
+                </button>
+            </div>
+
+            <p id="character-description">K-803</p>
         </div>
 
 
@@ -55,16 +77,6 @@
             </section>
 
 
-            <!-- <section class="audio">
-                <h2>視聴</h2>
-
-                <audio controls>
-                    <source src="../audio/.wav" type="audio/wav">
-                    お使いのブラウザでは音声を再生できません。
-                </audio>
-            </section> -->
-
-
             <section class="download">
                 <h2>ダウンロード</h2>
 
@@ -83,6 +95,10 @@
                 <a href="https://github.com/Kanone5679/UTAU-zip-download-files/releases/download/kyannmi/K-803_cvvc.zip" download>
                     K-803（CVVC）.zip
                 </a>
+
+                <a href="https://github.com/Kanone5679/UTAU-zip-download-files/releases/download/kyannmi/K-804_cvvc.zip" download>
+                    K-804（CVVC）.zip
+                </a>
             </section>
 
 
@@ -93,7 +109,8 @@
                     2026.09.25　単独音公開<br>
                     2026.09.26　連続音・連続音（低）公開<br>
                     2026.10.03　CVVC公開<br>
-                    2026.10.04　CVVC更新
+                    2026.10.04　CVVC更新<br>
+                    2026.11.08　K-804（アペンド音源）公開
                 </p>
             </section>
 
@@ -106,6 +123,91 @@
         <p>各種コンテンツは利用規約をご確認の上ご利用ください</p>
         <p>@2026 kyannmi</p>
     </footer>
+
+    <script>
+
+    // 立ち絵の登録
+    const characterImages = [
+
+        {
+            src: "../img/K-803tachie.png",
+            alt: "K-803立ち絵",
+            description: "K-803"
+        },
+
+        {
+            src: "../img/K-804tachie.png",
+            alt: "K-804立ち絵",
+            description: "K-804"
+        }
+
+    ];
+
+    // 立ち絵をあらかじめ読み込んでおく
+    characterImages.forEach(function(data){
+        const preload = new Image();
+        preload.src = data.src;
+    });
+
+    let currentIndex = 0;
+
+    // 表示を更新する処理
+    function updateCharacter(){
+        const image = document.getElementById("character-image");
+        const description = document.getElementById("character-description");
+        const data = characterImages[currentIndex];
+
+        // フェードアウト
+        image.classList.add("character-fade");
+        description.classList.add("character-fade");
+
+        setTimeout(function(){
+
+            // 画像を切り替える
+            image.src = data.src;
+            image.alt = data.alt;
+            description.textContent = data.description;
+
+            // フェードイン
+            image.classList.remove("character-fade");
+            description.classList.remove("character-fade");
+
+        }, 300);
+    }
+
+    // 前へ
+    document.getElementById("prev-character").addEventListener("click", function(){
+
+        currentIndex--;
+
+        if(currentIndex < 0){
+            currentIndex = characterImages.length - 1;
+        }
+
+        updateCharacter();
+
+    });
+
+    // 次へ
+    document.getElementById("next-character").addEventListener("click", function(){
+
+        currentIndex++;
+
+        if(currentIndex >= characterImages.length){
+            currentIndex = 0;
+        }
+
+        updateCharacter();
+
+    });
+
+    // 画像が1枚だけなら矢印を非表示
+    if(characterImages.length <= 1){
+        document.getElementById("prev-character").style.display = "none";
+        document.getElementById("next-character").style.display = "none";
+    }
+
+    </script>
 
 </body>
 </html>

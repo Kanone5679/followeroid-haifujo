@@ -47,7 +47,7 @@ body{
    左：立ち絵
 ======================================== */
 
-.character{
+/* .character{
     width:550px;
     flex-shrink:0;
 
@@ -64,8 +64,69 @@ body{
     height:auto;
 
     object-fit:contain;
+} */
+
+.character{
+    width:550px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
+/* 画像と矢印 */
+
+.character-image-area{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+}
+
+.character-image-area img{
+    display:block;
+    max-width:150%;
+    max-height:1600px;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    transform:translateX(-125px);
+}
+
+/* 矢印 */
+
+.character-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:10;
+
+    border:none;
+    background:transparent;
+    font-size:22px;
+    color:#000000;
+    cursor:pointer;
+}
+
+#prev-character{
+    left:0;
+}
+
+#next-character{
+    right:0;
+}
+
+/* フェード効果 */
+
+.character-image-area img,
+#character-description{
+    opacity:1;
+    transition: opacity 0.3s ease;
+}
+
+.character-fade{
+    opacity:0 !important;
+}
 
 /* ========================================
    右：情報
