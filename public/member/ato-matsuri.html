@@ -159,30 +159,22 @@
         const description = document.getElementById("character-description");
         const data = characterImages[currentIndex];
 
-        // 切り替え先の画像を先に読み込む
-        const preload = new Image();
+        // フェードアウト
+        image.classList.add("character-fade");
+        description.classList.add("character-fade");
 
-        preload.onload = function(){
+        setTimeout(function(){
 
-            // フェードアウト
-            image.classList.add("character-fade");
-            description.classList.add("character-fade");
+            // 画像を切り替える
+            image.src = data.src;
+            image.alt = data.alt;
+            description.textContent = data.description;
 
-            setTimeout(function(){
+            // フェードイン
+            image.classList.remove("character-fade");
+            description.classList.remove("character-fade");
 
-                // 画像と説明を変更
-                image.src = data.src;
-                image.alt = data.alt;
-                description.textContent = data.description;
-
-                // フェードイン
-                image.classList.remove("character-fade");
-                description.classList.remove("character-fade");
-
-            }, 300);
-        };
-
-        preload.src = data.src;
+        }, 300);
     }
 
     // 前へ
