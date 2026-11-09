@@ -90,7 +90,7 @@ body{
     width:auto;
     height:auto;
     object-fit:contain;
-    transform:translateX(-100px);
+    transform:translateX(-125px);
 }
 
 /* 矢印 */
