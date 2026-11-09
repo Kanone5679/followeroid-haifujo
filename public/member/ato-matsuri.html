@@ -131,12 +131,6 @@
     // 立ち絵の登録
     const characterImages = [
 
-        // 立ち絵をあらかじめ読み込んでおく
-        characterImages.forEach(function(data){
-            const preload = new Image();
-            preload.src = data.src;
-        }),
-
         {
             src: "../img/matsuritachie.png",
             alt: "阿藤まつり立ち絵",
@@ -150,6 +144,12 @@
         }
 
     ];
+
+    // 立ち絵をあらかじめ読み込んでおく
+    characterImages.forEach(function(data){
+        const preload = new Image();
+        preload.src = data.src;
+    });
 
     let currentIndex = 0;
 
