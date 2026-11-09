@@ -1,7 +1,7 @@
 /* ーーーーー フォント ーーーーー */
 @font-face{
     font-family: "BodyFont";
-    src: url("../font/HakkouMincho/._HakkouMincho.ttf") format("truetype");
+    src: url("../font/HakkouMincho/HakkouMincho.ttf") format("truetype");
 }
 
 /* ーーーーー 全体 ーーーーー */
