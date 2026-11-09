@@ -16,7 +16,29 @@
 
         <!-- 左：立ち絵 -->
         <div class="character">
-            <img src="../img/matsuritachie.png" alt="阿藤まつり立ち絵">
+            <button class="character-arrow"
+                    id="prev-character"
+                    type="button"
+                    aria-label="前の立ち絵">
+                ◀
+            </button>
+
+            <div class="character-display">
+                <img id="character-image"
+                    src="../img/matsuritachie.png"
+                    alt="阿藤まつり立ち絵">
+
+                <p id="character-description">
+                    阿藤まつり
+                </p>
+            </div>
+
+            <button class="character-arrow"
+                    id="next-character"
+                    type="button"
+                    aria-label="次の立ち絵">
+                ▶
+            </button>
         </div>
 
 
@@ -101,6 +123,76 @@
         <p>各種コンテンツは利用規約をご確認の上ご利用ください</p>
         <p>@2026 fujimariri</p>
     </footer>
+
+    <script>
+
+    // 立ち絵の登録
+    const characterImages = [
+
+        {
+            src: "../img/matsuritachie.png",
+            alt: "阿藤まつり立ち絵",
+            description: "阿藤まつり"
+        },
+
+        {
+            src: "../img/matsurisasayakitachie.png",
+            alt: "阿藤まつり（囁）立ち絵",
+            description: "阿藤まつり（囁）"
+        },
+
+    ];
+
+    let currentIndex = 0;
+
+    // 表示を更新する処理
+    function updateCharacter(){
+
+        const image = document.getElementById("character-image");
+        const description = document.getElementById("character-description");
+
+        const data = characterImages[currentIndex];
+
+        image.src = data.src;
+        image.alt = data.alt;
+
+        description.textContent = data.description;
+
+    }
+
+    // 前へ
+    document.getElementById("prev-character").addEventListener("click", function(){
+
+        currentIndex--;
+
+        if(currentIndex < 0){
+            currentIndex = characterImages.length - 1;
+        }
+
+        updateCharacter();
+
+    });
+
+    // 次へ
+    document.getElementById("next-character").addEventListener("click", function(){
+
+        currentIndex++;
+
+        if(currentIndex >= characterImages.length){
+            currentIndex = 0;
+        }
+
+        updateCharacter();
+
+    });
+
+    // 画像が1枚だけなら矢印を非表示
+    if(characterImages.length <= 1){
+        document.getElementById("prev-character").style.display = "none";
+        document.getElementById("next-character").style.display = "none";
+    }
+
+    </script>
 
 </body>
 </html>
