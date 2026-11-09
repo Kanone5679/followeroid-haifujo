@@ -81,6 +81,7 @@ body{
     justify-content:center;
     align-items:center;
     width:100%;
+    transform:translateX(-100px);
 }
 
 .character-image-area img{
