@@ -131,6 +131,12 @@
     // 立ち絵の登録
     const characterImages = [
 
+        // 立ち絵をあらかじめ読み込んでおく
+        characterImages.forEach(function(data){
+            const preload = new Image();
+            preload.src = data.src;
+        });
+
         {
             src: "../img/matsuritachie.png",
             alt: "阿藤まつり立ち絵",
@@ -149,30 +155,34 @@
 
     // 表示を更新する処理
     function updateCharacter(){
-
         const image = document.getElementById("character-image");
         const description = document.getElementById("character-description");
-
         const data = characterImages[currentIndex];
 
-        // フェードアウト
-        image.classList.add("character-fade");
-        description.classList.add("character-fade");
+        // 切り替え先の画像を先に読み込む
+        const preload = new Image();
 
-        // フェードアウト後に画像を変更
-        setTimeout(function(){
+        preload.onload = function(){
 
-            image.src = data.src;
-            image.alt = data.alt;
+            // フェードアウト
+            image.classList.add("character-fade");
+            description.classList.add("character-fade");
 
-            description.textContent = data.description;
+            setTimeout(function(){
 
-            // フェードイン
-            image.classList.remove("character-fade");
-            description.classList.remove("character-fade");
+                // 画像と説明を変更
+                image.src = data.src;
+                image.alt = data.alt;
+                description.textContent = data.description;
 
-        }, 300);
+                // フェードイン
+                image.classList.remove("character-fade");
+                description.classList.remove("character-fade");
 
+            }, 300);
+        };
+
+        preload.src = data.src;
     }
 
     // 前へ
