@@ -81,7 +81,7 @@ body{
     justify-content:center;
     align-items:center;
     width:100%;
-    transform:translateX(-75px);
+    transform:translateX(-50px);
 }
 
 .character-image-area img{
@@ -91,7 +91,7 @@ body{
     width:auto;
     height:auto;
     object-fit:contain;
-    transform:translateX(-75px);
+    transform:translateX(-100px);
 }
 
 /* 矢印 */
